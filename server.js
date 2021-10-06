@@ -59,3 +59,5 @@ app.get("*", (req, res) => {
 });
 
 //app.listen(...)
+
+const secret = process.env.SECRET || "some secret passphrase here for local development"
