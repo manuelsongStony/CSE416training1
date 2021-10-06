@@ -9,6 +9,9 @@ const studentRoute = require('./routes/student.route')
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+
+/*
 mongoose.connect(dbConfig.db, {
   useNewUrlParser: true
 }).then(() => {
@@ -18,6 +21,7 @@ mongoose.connect(dbConfig.db, {
     console.log('Could not connect to database : ' + error)
   }
 )
+*/
 
 const app = express();
 app.use(bodyParser.json());
