@@ -8,8 +8,6 @@
 # testing
 /coverage
 
-# production
-/build
 
 # misc
 .DS_Store
@@ -23,7 +21,6 @@ yarn-debug.log*
 yarn-error.log*
 
 node_modules/
-config/default.json
 .env
 *.orig
 .idea/
