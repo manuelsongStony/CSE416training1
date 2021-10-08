@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "MERN Stack backend",
   "main": "server.js",
-   "scripts": {
+  "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "engines": {
     "node": "12.18.4"
-},
+  },
   "author": "Digamber Rawat",
   "license": "ISC",
   "dependencies": {
