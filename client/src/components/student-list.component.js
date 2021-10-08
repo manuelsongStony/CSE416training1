@@ -14,7 +14,7 @@ export default class StudentList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/students/')
+    axios.get('/students/')
       .then(res => {
         this.setState({
           students: res.data
