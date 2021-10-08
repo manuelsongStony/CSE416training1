@@ -57,11 +57,9 @@ app.use(function (err, req, res, next) {
 
 
 
-// PORT
 
-const server = app.listen(port, () => {
-  console.log('Connected to port ' + port)
-})
+
+
 
 
 
@@ -76,7 +74,13 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
-
 //app.listen(...)
+
+// PORT
+const server = app.listen(port, () => {
+  console.log('Connected to port ' + port)
+})
+
+
 
 const secret = process.env.SECRET || "some secret passphrase here for local development"
