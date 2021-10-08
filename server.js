@@ -4,15 +4,22 @@ let cors = require('cors');
 let bodyParser = require('body-parser');
 //let dbConfig = require('./database/db');
 
+// ... other imports 
+const path = require("path")
+
+
 require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
+
 
 
 app.use(cors());
 app.use(express.json());
 
 
+// ... other app.use middleware 
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 // Connecting mongoDB Database
@@ -63,11 +70,9 @@ app.use(function (err, req, res, next) {
 
 
 
-// ... other imports 
-const path = require("path")
 
-// ... other app.use middleware 
-app.use(express.static(path.join(__dirname, "client", "build")))
+
+
 
 // ...
 // Right before your app.listen(), add this:
