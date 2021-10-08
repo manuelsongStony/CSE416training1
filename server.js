@@ -56,11 +56,6 @@ app.use(function (err, req, res, next) {
 */
 
 
-// 404 Error
-app.use((req, res, next) => {
-  next(createError(404));
-});
-
 
 // PORT
 
